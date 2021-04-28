@@ -1,18 +1,18 @@
 <?php
 $ablakcim = array(
-    'cim' => 'nonprofit egyesület',
+    'cim' => 'Mimóza Macskavédő Alapítvány',
 );
 
 $fejlec = array(
     'kepforras' => 'logo.png',
     'kepalt' => 'logo',
-	'cim' => 'egyesület',
+	'cim' => 'Mimóza Macskavédő Alapítvány',
 	'motto' => ''
 );
 
 $lablec = array(
     'copyright' => 'Copyright '.date("Y").'.',
-    'ceg' => 'nonprofit egyesület'
+    'ceg' => 'Mimóza Macskavédő Alapítvány'
 );
 
 $oldalak = array(
