@@ -8,13 +8,13 @@ if (isset($keres) && file_exists("./logicals/{$keres['fajl']}.php")) {
 <!DOCTYPE html>
 <html lang="hu" class="h-100">
 <head>
+<link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $weboldalCim['cim'] ?></title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-    <link href="./styles/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body class="d-flex flex-column h-100">
     <header>
@@ -29,8 +29,7 @@ if (isset($keres) && file_exists("./logicals/{$keres['fajl']}.php")) {
                 <div id="navbarCollapse" class="collapse navbar-collapse">
                     <ul class="navbar-nav ms-auto mb-2 mb-md-0">
                     <?php foreach ($oldalak as $url => $oldal) : ?>
-                        <?php if ($oldal['visible']
-                            && !isset($_SESSION['user']) && $oldal['menun'][0]
+                        <?php if (!isset($_SESSION['user']) && $oldal['menun'][0]
                             || isset($_SESSION['user']) && $oldal['menun'][1]) : ?>
                         <li class="nav-item">
                             <a class="nav-link<?= $oldal == $keres ? ' active' : '' ?>" href="<?= ($url == '/') ? '.' : ('?oldal=' . $url) ?>">
@@ -48,7 +47,7 @@ if (isset($keres) && file_exists("./logicals/{$keres['fajl']}.php")) {
                 </div>
             </div>
         </nav>
-        
+        <div class="hero-image"></div>
     </header>
 
     <main class="flex-shrink-0">
@@ -59,8 +58,10 @@ if (isset($keres) && file_exists("./logicals/{$keres['fajl']}.php")) {
 
     <footer class="footer mt-auto py-3 bg-light">
         <div class="container text-center">
-            <span class="text-muted"><?= $lablec['copyright'] ?> - <?= $lablec['nev'] ?></span>
+            <span class="text-muted"><?= $lablec['copyright'] ?> - <?= $lablec['ceg'] ?></span>
+            <a href="https://www.macskamentok.hu/" >Link az eredeti oldalra</a>
         </div>
+       
     </footer>
 
     <?php if (isset($keres) && file_exists("./scripts/{$keres['fajl']}.js")) : ?>

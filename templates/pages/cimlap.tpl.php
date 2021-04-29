@@ -1,4 +1,5 @@
-<img class="img-fluid headercica" src="images/ado1.jpg" alt="kezdo">
+<div class="masik-image"></div>
+
 <h2> Adó 1%!</h2>
 				
 <p>Ismét villámgyorsan eltelt egy év! Hamarosan itt a május, amikor is dönthettek az adótok 1%-ának felajánlásáról.
@@ -18,9 +19,7 @@ Kérünk titeket, amennyiben érdemesnek találtok rá minket, ajánljátok fel 
 <h2>Alapítványunkról</h2>
 <p>Macskamentők alapítvány 2010-től működik. Célunk: a kóbor macskák létszámának csökkentése. Ezért ivarérett macskákat csak ivartalanitva adunk gazdához. Illetve mióta 1%-ot tudunk gyűjteni ennek egy részét a lakosság felé, mint kedvezményes ivartalanítás, visszafordítjuk. Régóta szerződésben vagyunk az Illatos úttal. Úgyhogy elsősorban innen mentünk macskákat, hogy továbbra se kelljen hely hiány miatt altatniuk. Alapitványunknál altatás nincs! Kivétel a végső stádiumban lévő, az orvosi kezelések ellenére is menthetetlen állatot.</p>         
     <div class="d-flex justify-content-center">
-    <video width="320" height="240" controls>
-  <source src="images/cat_video.mp4" type=video>
-</video>
+    <iframe src="images/cat_video.mp4" width="540" height="310"></iframe>
     </div>            
 
 
