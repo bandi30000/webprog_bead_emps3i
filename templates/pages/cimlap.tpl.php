@@ -1,4 +1,3 @@
-<div class="masik-image"></div>
 
 <h2> Adó 1%!</h2>
 				

@@ -23,6 +23,7 @@ $oldalak = array(
     'galeria' => array('fajl' => 'galeria', 'szoveg' => 'Galéria', 'menun' => array(1,1)),
     'kilep' => array('fajl' => 'kilep', 'szoveg' => 'Kilépés', 'menun' => array(0,1)),
     'belep' => array('fajl' => 'belep', 'szoveg' => 'Belépés', 'menun' => array(1,0)),
+    'register' => array('fajl' =>'register', 'szoveg'=>'', 'menun' => array(0,0)),
     
 );
 
