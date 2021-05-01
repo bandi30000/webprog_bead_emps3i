@@ -18,13 +18,13 @@ $lablec = array(
 $oldalak = array(
 	'/' => array('fajl' => 'cimlap', 'szoveg' => 'Címlap', 'menun' => array(1,1)),
 	'kapcsolat' => array('fajl' => 'kapcsolat','szoveg' => 'Kapcsolat', 'menun' => array(1,1)),
-    'uzenet' => array('fajl' => 'uzenet', 'szoveg' => 'Írj nekünk', 'menun' => array(1,1)),
+    'uzenet' => array('fajl' => 'uzenet', 'szoveg' => 'Üzenetküldés', 'menun' => array(1,0)),
     'uzenetek' => array('fajl' => 'uzenetek', 'szoveg' => 'Üzenetek', 'menun' => array(0,1)),
     'galeria' => array('fajl' => 'galeria', 'szoveg' => 'Galéria', 'menun' => array(1,1)),
     'kilep' => array('fajl' => 'kilep', 'szoveg' => 'Kilépés', 'menun' => array(0,1)),
     'belep' => array('fajl' => 'belep', 'szoveg' => 'Belépés', 'menun' => array(1,0)),
     'register' => array('fajl' =>'register', 'szoveg'=>'', 'menun' => array(0,0)),
-    
+
 );
 
 $hiba_oldal = array ('fajl' => '404', 'szoveg' => 'A keresett oldal nem található!');

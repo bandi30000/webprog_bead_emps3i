@@ -2,7 +2,7 @@
     if(isset($_POST['nev']) && isset($_POST['email']) && isset($_POST['szoveg'])) {
         try {
             // Kapcsolódás
-            $dbh = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',
+            $dbh = new PDO('mysql:host=localhost;dbname=beadsql', 'root', '',
                             array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
             $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
             }

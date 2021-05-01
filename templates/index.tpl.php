@@ -18,6 +18,11 @@ if (isset($keres) && file_exists("./logicals/{$keres['fajl']}.php")) {
 </head>
 <body class="d-flex flex-column h-100">
     <header>
+      <?php if (isset($_SESSION['felhasznalo'])) : ?>
+      <div class="d-flex justify-content-end form-floating">
+          <span class="badge text-light bg-dark">Bejelentkezett: <?= $_SESSION['csaladi_nev'] ?>&nbsp;<?= $_SESSION['uto_nev'] ?> (<?= $_SESSION['felhasznalo'] ?>)</span>
+      </div>
+      <?php endif; ?>
         <nav class="navbar navbar-expand-md navbar-light bg-first">
             <div class="container-fluid">
                 <a href="/webprog_beadando-master/" class="navbar-brand">
@@ -33,22 +38,18 @@ if (isset($keres) && file_exists("./logicals/{$keres['fajl']}.php")) {
                             || isset($_SESSION['felhasznalo']) && $oldal['menun'][1]) : ?>
                         <li class="nav-item">
                             <a class="nav-link<?= $oldal == $keres ? ' active' : '' ?>" href="<?= ($url == '/') ? '.' : ('?oldal=' . $url) ?>">
-                                <?= $oldal['szoveg'] ?>
+                                <?= $oldal == $keres ? '<u>' : '' ?><?= $oldal['szoveg'] ?><?= $oldal == $keres ? '</u>' : '' ?>
                             </a>
                         </li>
                         <?php endif; ?>
                     <?php endforeach; ?>
                     </ul>
-                    <?php if (isset($_SESSION['felhasznalo'])) : ?>
-                    <div class="d-flex">
-                        <span class="badge bg-primary text-wrap text-black loginneve"><?= $_SESSION['felhasznalo'] ?> </span>
-                    </div>
-                    <?php endif; ?>
+
                 </div>
             </div>
         </nav>
         <?php if ($keres['fajl']=='cimlap') : ?><a href="#ide"><div class="masik-image"></div></a>
-        <?php else: ?> 
+        <?php else: ?>
         <div class="hero-image"></div>
         <?php endif; ?>
     </header>
@@ -64,7 +65,7 @@ if (isset($keres) && file_exists("./logicals/{$keres['fajl']}.php")) {
             <span class="text-muted"><?= $lablec['copyright'] ?> - <?= $lablec['ceg'] ?></span>
             <a href="https://www.macskamentok.hu/" >Link az eredeti oldalra</a>
         </div>
-       
+
     </footer>
 
     <?php if (isset($keres) && file_exists("./scripts/{$keres['fajl']}.js")) : ?>
